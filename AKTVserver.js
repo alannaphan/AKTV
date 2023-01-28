@@ -14,15 +14,12 @@ app.post('/post',(req,res) => {
     const currentList = [];
     var jsontext;
     if (z['action'] == "createProfile") {
-        const newUser = [z['name'],z['major'],dayAvailable];
         for (var i = 0; i < z['day'].length;i++) {
             dayAvailable.push(z['day'][i]);
         }
         var jsontext = JSON.stringify({
         'action':'createDone',
-        'msg':'createDone',
-        'name':newUser[0],
-        'major':newUser[1]
+        'msg':'createDone'
         });
         console.log(jsontext);
         res.send(jsontext);

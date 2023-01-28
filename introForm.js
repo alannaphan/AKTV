@@ -62,8 +62,7 @@ function response(data,status) {
     var response = JSON.parse(data);
     console.log(data);
     if (response['action'] == 'createDone') {
-        var message = "Profile created" + <br></br> + response['name'] + <br></br> + response['major'];
-        alert(message);
+        alert("Profile create");
         window.location.href = "swipe.html";
     }
 }
