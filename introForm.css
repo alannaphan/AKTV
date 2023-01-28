@@ -12,3 +12,10 @@ h1 {
     width: 20%;
     height: auto;
 }
+
+.formfield {
+    text-align: left;
+    width: fit-content;
+    height: fit-content;
+    border-color: black;
+}
