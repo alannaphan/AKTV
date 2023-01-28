@@ -45,7 +45,6 @@ function submit() {
         alert("Please choose the days you are available");
     }
     else {
-
         $.post(
             url+'?data='+JSON.stringify
             ({ //compare the input name with the database
@@ -65,6 +64,10 @@ function response(data,status) {
     if (response['action'] == 'createDone') {
         alert("Profile created");
         window.location.href = "swipe.html";
+    }
+    if (response['action']=='missingName') {
+        alert("Please fill in your name");
+        window.location.reload();
     }
 }
 
