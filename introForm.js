@@ -63,7 +63,7 @@ function response(data,status) {
     console.log(data);
     if (response['action'] == 'createDone') {
         alert("Profile created");
-        window.location.href = "profile.html";
+        window.location.href = "swipe.html";
     }
     if (response['action']=='missingName') {
         alert("Please fill in your name");
