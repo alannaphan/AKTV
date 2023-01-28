@@ -55,15 +55,16 @@ function submit() {
             'action':'createProfile'
             }),
             response);
-            window.location.href = "swipe.html";
+            
         }
 }
 
 function response(data,status) {
     var response = JSON.parse(data);
     console.log(data);
-    if (response['action'] == 'createProfile') {
+    if (response['action'] == 'createDone') {
         alert("Profile created");
+        window.location.href = "swipe.html";
     }
 }
 

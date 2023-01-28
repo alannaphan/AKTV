@@ -15,7 +15,7 @@ app.post('/post',(req,res) => {
     var jsontext;
     if (z['action'] == "createProfile") {
             var jsontext = JSON.stringify({
-                'action':'createProfile',
+                'action':'createDone',
                 'msg':'Profile created'
             });
         console.log(jsontext);
