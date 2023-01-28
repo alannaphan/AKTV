@@ -17,7 +17,7 @@ app.post('/post',(req,res) => {
         for (var i = 0; i < z['day'].length;i++) {
             dayAvailable.push(z['day'][i]);
         }
-        if (z['name']==null) {
+        if (z['name']==null || z['name']=="") {
             var jsontext = JSON.stringify({
                 'action':'missingName',
                 'msg':'missingName'
