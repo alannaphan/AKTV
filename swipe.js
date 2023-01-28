@@ -1,5 +1,5 @@
 function match(){
-    alert("You matched! Time to study!");
+    alert("A+ you matched! Time to hit the books!");
 }
 
 function reject(){
