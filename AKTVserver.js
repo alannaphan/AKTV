@@ -14,11 +14,15 @@ app.post('/post',(req,res) => {
     const currentList = [];
     var jsontext;
     if (z['action'] == "createProfile") {
-        for (var i = 0; i < z['day'].length;i++) {
+        var name = z['name'];
+        var major = z['major'];
+        /*for (var i = 0; i < z['day'].length;i++) {
             dayAvailable.push(z['day'][i]);
-        }
+        }*/
         var jsontext = JSON.stringify({
         'action':'createDone',
+        'name': z['name'],
+        'major':z['major'],
         'msg':'createDone'
         });
         console.log(jsontext);

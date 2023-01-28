@@ -3,8 +3,10 @@ var url = "http://localhost:3000/post";
 
 
 function submit() {
-    var name = document.getElementById("fname");
-    var major = document.getElementById("major");
+    var name = document.getElementById("fname").value;
+    var majorIndex = document.getElementById("major").selectedIndex;
+    var majorList = document.getElementById("major").options;
+    var major = majorList[majorIndex].text;
     const day = [];
     var input;
     for (var i=1; i<=5; i++) {
@@ -50,7 +52,7 @@ function submit() {
             ({ //compare the input name with the database
             'name':name,
             'major': major,
-            'day':day,
+            //'day':day,
             'action':'createProfile'
             }),
             response);
@@ -62,7 +64,8 @@ function response(data,status) {
     var response = JSON.parse(data);
     console.log(data);
     if (response['action'] == 'createDone') {
-        alert("Profile create");
+
+        alert("Profile create" + <br></br>+ response['name'] + <br></br> + response['major']);
         window.location.href = "swipe.html";
     }
 }
