@@ -20,13 +20,11 @@
 			<div class="name">
 				<label for="fname">First name:</label><br>
 				<input type="text" id="fname" name="fname"><br>
-				<label for="lname">Last name:</label><br>
-				<input type="text" id="lname" name="lname">
 			</div>
 			<br>
 			<div class="majorEnrolled">
 				<label for="major">Major</label><br>
-				<select name="majors" id="majors" multiple>
+				<select name="major" id="major" multiple>
 				  <option value="cs">Computer Science</option>
 				  <option value="ee">Electrical Engineering</option>
 				  <option value="me">Mechanical Engineering</option>
@@ -35,21 +33,22 @@
 			</div>		
 			<br>
 			<div class="dayAvailable">
+				<label for="dayAvailable">Days Available</label><br>
 				<input type="checkbox" id="day1" name="day1" value="Monday">
-				<label for="day1"> Monday</label><br>
+				<label for="day1"> Monday</label>
 				<input type="checkbox" id="day2" name="day2" value="Tuesday">
 				<label for="day2">Tuesday</label><br>
 				<input type="checkbox" id="day3" name="day3" value="Wednesday">
-				<label for="day3">Wednesday</label><br>
+				<label for="day3">Wednesday</label>
 				<input type="checkbox" id="day4" name="day4" value="Thursday">
-				<label for="day4">Thursday</label><br>
+				<label for="day4">Thursday</label>
 				<input type="checkbox" id="day5" name="day5" value="Friday">
-				<label for="day5">Friday</label><br>
+				<label for="day5">Friday</label><br> 
 			</div>
-
-		</form>
+		</form> <br>
 		<button onclick="submit()" id="infoSubmit">Done!</button>
 	</div>
+	<br>
 	<footer>(c) Authors: <span>AKTV</span></footer>
 </body>
 
