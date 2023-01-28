@@ -14,24 +14,20 @@ app.post('/post',(req,res) => {
     const currentList = [];
     var jsontext;
     if (z['action'] == "createProfile") {
+        const newUser = [z['name'],z['major'],dayAvailable];
         for (var i = 0; i < z['day'].length;i++) {
             dayAvailable.push(z['day'][i]);
         }
-        if (z['name']==null || z['name']=="") {
-            var jsontext = JSON.stringify({
-                'action':'missingName',
-                'msg':'missingName'
-            });
-        }
-        else {
-            var jsontext = JSON.stringify({
-            'action':'createDone',
-            'msg':'createDone'
-            });
-        }
+        var jsontext = JSON.stringify({
+        'action':'createDone',
+        'msg':'createDone',
+        'name':newUser[0],
+        'major':newUser[1]
+        });
         console.log(jsontext);
         res.send(jsontext);
-        }
+
+    }
 }
   
 ).listen(3000);
