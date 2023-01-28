@@ -13,9 +13,9 @@ h1 {
     height: auto;
 }
 
-.formfield {
-    text-align: left;
-    width: fit-content;
-    height: fit-content;
-    border-color: black;
+#infoSubmit {
+    font-size: 25px;
+    background-color: red;
+    color:white;
+    border-color: red;
 }
