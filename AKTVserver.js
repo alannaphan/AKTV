@@ -17,21 +17,14 @@ app.post('/post',(req,res) => {
         for (var i = 0; i < z['day'].length;i++) {
             dayAvailable.push(z['day'][i]);
         }
-        if (z['name']==null || z['name']=="") {
-            var jsontext = JSON.stringify({
-                'action':'missingName',
-                'msg':'missingName'
-            });
-        }
-        else {
-            var jsontext = JSON.stringify({
-            'action':'createDone',
-            'msg':'createDone'
-            });
-        }
+        var jsontext = JSON.stringify({
+        'action':'createDone',
+        'msg':'createDone'
+        });
         console.log(jsontext);
         res.send(jsontext);
-        }
+
+    }
 }
   
 ).listen(3000);

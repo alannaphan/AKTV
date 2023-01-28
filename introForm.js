@@ -62,12 +62,8 @@ function response(data,status) {
     var response = JSON.parse(data);
     console.log(data);
     if (response['action'] == 'createDone') {
-        alert("Profile created");
+        alert("Profile create");
         window.location.href = "swipe.html";
-    }
-    if (response['action']=='missingName') {
-        alert("Please fill in your name");
-        window.location.reload();
     }
 }
 
