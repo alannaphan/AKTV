@@ -1,0 +1,67 @@
+html{
+    background-color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+}
+h1 {
+    background-color: rgb(227, 24, 55);
+    color: white;
+}
+#york {
+    background-color: white;
+    width: 20%;
+    height: auto;
+}
+#mine {
+    margin: auto;
+    margin-bottom: 20px;
+    border: 2px black solid;
+    width: 500px;
+    padding: 20px;
+    background-color: rgb(227, 24, 55);
+    color: white;
+}
+#profile {
+    width: 350px;
+    height: auto;
+    border: white solid 2px;
+}
+#yes{
+    background-color: #00A159;
+    color: white;
+    border-radius: 50%;
+    border: white 2px solid;
+    width: 100px;
+    height: 100px;
+    position: relative;
+    right: -150px;
+    font-size: 30px;
+    font-weight: bold;  
+}
+#yes:hover {
+    background-color: white;
+    color: black;
+}
+#no{
+    background-color: rgb(129, 0, 1);
+    color: white;
+    border-radius: 50%;
+    border: white 2px solid;
+    width: 100px;
+    height: 100px;
+    position: relative;
+    left: -150px;
+    font-size: 30px;
+    font-weight: bold;
+}
+#no:hover {
+    background-color: white;
+    color: black;
+}
+#buddy {
+    font-size: 25px;
+    background-color: rgb(227, 24, 55);
+    color:white;
+    border-color: rgb(227, 24, 55);
+	margin-bottom: 20px;
+}
