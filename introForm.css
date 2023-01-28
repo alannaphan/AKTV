@@ -4,7 +4,7 @@ html{
     text-align: center;
 }
 h1 {
-    background-color: red;
+    background-color: rgb(227, 24, 55);
     color: white;
 }
 #york {
@@ -15,7 +15,7 @@ h1 {
 
 #infoSubmit {
     font-size: 25px;
-    background-color: red;
+    background-color: rgb(227, 24, 55);
     color:white;
-    border-color: red;
+    border-color: rgb(227, 24, 55);
 }
