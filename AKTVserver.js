@@ -1,6 +1,6 @@
-
 var express = require("express");
 var app = express();
+var port = 3000;
 var dayAvailable = [];
 var name;
 //receive request from the client side

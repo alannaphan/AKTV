@@ -44,17 +44,19 @@ function submit() {
     if (day.length==0) {
         alert("Please choose the days you are available");
     }
+    else {
 
-    $.post(
-        url+'?data='+JSON.stringify
-        ({ //compare the input name with the database
-        'name':name,
-        'major': major,
-        'day':day,
-        'action':'createProfile'
-        }),
-        response);
-        window.location.href = "swipe.html";
+        $.post(
+            url+'?data='+JSON.stringify
+            ({ //compare the input name with the database
+            'name':name,
+            'major': major,
+            'day':day,
+            'action':'createProfile'
+            }),
+            response);
+            window.location.href = "swipe.html";
+        }
 }
 
 function response(data,status) {
