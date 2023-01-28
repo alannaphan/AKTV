@@ -44,24 +44,27 @@ function submit() {
     if (day.length==0) {
         alert("Please choose the days you are available");
     }
+    else {
 
-    $.post(
-        url+'?data='+JSON.stringify
-        ({ //compare the input name with the database
-        'name':name,
-        'major': major,
-        'day':day,
-        'action':'createProfile'
-        }),
-        response);
-        window.location.href = "swipe.html";
+        $.post(
+            url+'?data='+JSON.stringify
+            ({ //compare the input name with the database
+            'name':name,
+            'major': major,
+            'day':day,
+            'action':'createProfile'
+            }),
+            response);
+            
+        }
 }
 
 function response(data,status) {
     var response = JSON.parse(data);
     console.log(data);
-    if (response['action'] == 'createProfile') {
+    if (response['action'] == 'createDone') {
         alert("Profile created");
+        window.location.href = "swipe.html";
     }
 }
 

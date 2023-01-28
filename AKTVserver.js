@@ -1,6 +1,6 @@
-
 var express = require("express");
 var app = express();
+var port = 3000;
 var dayAvailable = [];
 var name;
 //receive request from the client side
@@ -15,7 +15,7 @@ app.post('/post',(req,res) => {
     var jsontext;
     if (z['action'] == "createProfile") {
             var jsontext = JSON.stringify({
-                'action':'createProfile',
+                'action':'createDone',
                 'msg':'Profile created'
             });
         console.log(jsontext);
