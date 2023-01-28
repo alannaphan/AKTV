@@ -1,5 +1,5 @@
 function match(){
-    alert("You matched! Time to study. We will send you an email with a compatible time, date, and location for you to meet your buddy at!");
+    alert("You matched! Time to study!");
 }
 
 function reject(){
