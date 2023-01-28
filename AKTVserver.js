@@ -16,9 +16,9 @@ app.post('/post',(req,res) => {
     if (z['action'] == "createProfile") {
         var name = z['name'];
         var major = z['major'];
-        /*for (var i = 0; i < z['day'].length;i++) {
+        for (var i = 0; i < z['day'].length;i++) {
             dayAvailable.push(z['day'][i]);
-        }*/
+        }
         var jsontext = JSON.stringify({
         'action':'createDone',
         'name': z['name'],

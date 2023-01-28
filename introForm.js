@@ -52,7 +52,7 @@ function submit() {
             ({ //compare the input name with the database
             'name':name,
             'major': major,
-            //'day':day,
+            'day':day,
             'action':'createProfile'
             }),
             response);
@@ -65,7 +65,7 @@ function response(data,status) {
     console.log(data);
     if (response['action'] == 'createDone') {
 
-        alert("Profile create" + <br></br>+ response['name'] + <br></br> + response['major']);
+        alert("Profile create\n" + response['name'] + "\n" + response['major']);
         window.location.href = "swipe.html";
     }
 }
