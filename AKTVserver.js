@@ -2,7 +2,7 @@ var express = require("express");
 var app = express();
 var port = 3000;
 var dayAvailable = [];
-var name;
+var name; var major;
 //receive request from the client side
 app.post('/post',(req,res) => {
     res.header("Access-Control-Allow-Origin","*");
@@ -14,21 +14,32 @@ app.post('/post',(req,res) => {
     const currentList = [];
     var jsontext;
     if (z['action'] == "createProfile") {
-        var name = z['name'];
-        var major = z['major'];
+        name = z['name'];
+        major = z['major'];
         for (var i = 0; i < z['day'].length;i++) {
             dayAvailable.push(z['day'][i]);
         }
         var jsontext = JSON.stringify({
         'action':'createDone',
-        'name': z['name'],
-        'major':z['major'],
+        /*'name': z['name'],
+        'major':z['major'],*/
         'msg':'createDone'
         });
         console.log(jsontext);
         res.send(jsontext);
 
     }
+
+    else if (z['action']=="changeProfileInfo") {
+        var jsontext = JSON.stringify({
+            'action':'profileChanged',
+            'name': name,
+            'major':major,
+            'msg':'profileChanged'
+            });
+            console.log(jsontext);
+            res.send(jsontext);
+        }
 }
   
 ).listen(3000);
