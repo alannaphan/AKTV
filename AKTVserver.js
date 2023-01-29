@@ -30,7 +30,7 @@ app.post('/post',(req,res) => {
 
     }
 
-    else if (z['action']=="changeProfileInfo") {
+    else if (z['action']=='changeProfileInfo') {
         var jsontext = JSON.stringify({
             'action':'profileChanged',
             'name': name,

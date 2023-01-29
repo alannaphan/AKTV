@@ -64,7 +64,6 @@ function response(data,status) {
     var response = JSON.parse(data);
     console.log(data);
     if (response['action'] == 'createDone') {
-        alert("Profile create\n");
         window.location.href = "profile.html";
     }
 }
