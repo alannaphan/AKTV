@@ -8,11 +8,14 @@ window.onload = function() {
     response);
   }
 
+  function buddy() {
+    window.location.href = "swipe.html";
+  }
 function response(data,status) {
     var response = JSON.parse(data);
     console.log(data);
     if (response['action'] == 'profileChanged') {
         document.getElementById("fname").innerHTML=response['name'];
-        document.getElementsById("major").innerHTML=response['major'];
+        document.getElementById("major").innerHTML=response['major'];
     }
 }
